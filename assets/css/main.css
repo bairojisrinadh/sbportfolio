@@ -192,7 +192,7 @@ h3 {
 
 .landing .content .line {
   border-bottom: 3px solid #e6c521;
-  width: 3.5rem;
+  width: 3.7rem;
   margin-left: 0.75rem;
 }
 
@@ -261,6 +261,7 @@ h3 {
   width: 35%;
   height: 100%;
   margin-left: 0.5rem;
+  padding: 0.25rem 0;
 }
 
 .projects .cards .card .card-content {
@@ -329,7 +330,8 @@ h3 {
 }
 
 .tech-stack .tech-cards .tech-card .title img {
-  color: #4f7dd9;
+  -webkit-filter: invert(0.5) sepia(1) saturate(100) hue-rotate(200deg);
+          filter: invert(0.5) sepia(1) saturate(100) hue-rotate(200deg);
   width: 3rem;
   height: 3rem;
   margin: 0.25rem 0.5rem;
@@ -458,11 +460,15 @@ h3 {
 }
 
 .contact-me .contacts .contact .medium .media a img {
-  color: #4f7dd9;
   width: 2.5rem;
   height: 2.5rem;
   margin: 0.25rem 0.5rem 0.25rem 0;
   vertical-align: middle;
+}
+
+.contact-me .contacts .contact .medium .media a .linkedIn {
+  -webkit-filter: invert(0.5) sepia(1) saturate(100) hue-rotate(200deg);
+          filter: invert(0.5) sepia(1) saturate(100) hue-rotate(200deg);
 }
 
 .contact-me .contacts .contact .form {
