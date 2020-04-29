@@ -43,7 +43,7 @@
           <img src="./assets/images/clients/hanover.svg" alt="The Hanover Insurance Group" />
           <div class="card-content">
             <span class="desgination">Software Development Specialist</span>
-            <span class="client-name">THE HANOVER INSURANCE GROUP</span>
+            <span class="client-name">HANOVER INSURANCE GROUP</span>
             <span class="tenure">Dec 2018 - Present</span>
           </div>
         </div>
@@ -111,7 +111,7 @@
         <span class="separator"></span>
         <div class="tech-card">
           <div class="title">
-            <img src="./assets/images/tech/infrastructure.svg" alt="list of infrastructure tools" />
+            <img class="ml-1" src="./assets/images/tech/infrastructure.svg" alt="list of infrastructure tools" />
             <span>Infrastructure Tools</span>
           </div>
           <div class="items">
@@ -201,12 +201,13 @@
               <label for="reason" class="form__label">Reason to contact</label>
             </div>
             <div class="form__group">
+              <img class="upload" src="./assets/images/upload.png" alt="upload file" />
               <input type="file" name="fileAttachment" id="fileAttachment" class="inputFile" multiple="" />
-              <label for="fileAttachment"><i class="fas fa-file-upload" aria-hidden="true"></i>Upload file</label>
-              <!-- below span will gets updated by JS function -->
+              <label for="fileAttachment">Upload File (If any)</label>
+              <!-- below #fileName will gets updated by JS function -->
               <div id="fileName"></div>
             </div>
-            <div class="form__group">
+            <div class="form__group doc__watermark">
               <div data-netlify-recaptcha="true"></div>
             </div>
             <div class="form__group">
@@ -218,6 +219,7 @@
     </section>
     <footer>
       <div class="footer">
+        <span class="logo__watermark">SB</span>
         <div><span>&copy;</span> 2020 - All Rights Reserved.</div>
         <div class="creator">Designed & Developed by Srinadh Biroji.</div>
         <a href="tel:+919030163159">Contact: +91 903 016 3159</a>
