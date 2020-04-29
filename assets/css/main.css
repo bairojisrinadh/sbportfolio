@@ -46,7 +46,7 @@ h3 {
 .landing .bg-black-shade {
   position: absolute;
   background-color: #000;
-  opacity: 0.8;
+  opacity: 0.7;
   width: inherit;
   height: inherit;
   z-index: -999;
@@ -285,12 +285,13 @@ h3 {
 .projects .cards .card .card-content .client-name {
   font-size: 1rem;
   font-weight: bold;
-  padding-bottom: 1rem;
 }
 
 .projects .cards .card .card-content .tenure {
   font-size: 0.6rem;
-  font-weight: bold;
+  font-weight: 600;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .tech-stack .tech-cards {
