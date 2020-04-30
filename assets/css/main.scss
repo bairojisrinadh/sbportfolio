@@ -273,6 +273,58 @@ h3 {
       }
     }
   }
+
+  a {
+    color: color(deep-blue);
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 1rem;
+  }
+
+  .nav-item {
+    span {
+      font-weight: 600;
+    }
+
+    .arrow-front {
+      position: relative;
+      padding: 0.75rem 0;
+    }
+
+    .arrow-front:before {
+      content: "";
+      width: 25px;
+      height: 2px;
+      background: color(deep-blue);
+      position: absolute;
+      margin-top: -1px;
+      right: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .arrow-front:hover:before {
+      right: 12px;
+      width: 35px;
+    }
+
+    .arrow-front:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 5px 0 5px 5px;
+      border-color: transparent transparent transparent color(deep-blue);
+      position: absolute;
+      margin-top: -5px;
+      right: 0;
+      transition: all 0.3s ease;
+    }
+
+    .arrow-front:hover:after {
+      right: 12px;
+    }
+  }
 }
 
 .tech-stack {
@@ -764,7 +816,7 @@ h3 {
     ul {
       padding-top: 0.5rem;
       padding-left: 2rem;
-      list-style: circle;
+      list-style: disc;
 
       li {
         font-size: 1rem;
@@ -849,12 +901,12 @@ h3 {
       background: color(black);
       position: absolute;
       margin-top: -1px;
-      right: 0;
+      right: 2px;
       transition: all 0.3s ease;
     }
 
     .arrow-front:hover:before {
-      right: 10px;
+      right: 12px;
       width: 35px;
     }
 
@@ -872,7 +924,7 @@ h3 {
     }
 
     .arrow-front:hover:after {
-      right: 10px;
+      right: 12px;
     }
 
     .arrow-back {
@@ -887,13 +939,13 @@ h3 {
       background: color(black);
       position: absolute;
       margin-top: -1px;
-      left: 0;
+      left: 2px;
       transition: all 0.3s ease;
     }
 
     .arrow-back:hover:before {
       cursor: pointer;
-      left: 10px;
+      left: 12px;
       width: 35px;
     }
 
@@ -912,7 +964,7 @@ h3 {
 
     .arrow-back:hover:after {
       cursor: pointer;
-      left: 10px;
+      left: 12px;
     }
   }
 }
