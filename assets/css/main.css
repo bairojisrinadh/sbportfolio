@@ -29,7 +29,6 @@ h3 {
   position: relative;
   width: 100vw;
   height: 100vh;
-  /** NAV MENU ANIMATION */
 }
 
 .landing .bg-img {
@@ -62,12 +61,21 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1rem 1rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  width: 100%;
+  z-index: 8;
   /** ANIMATION */
+  /** NAV MENU ANIMATION */
 }
 
 .landing .logo h3 {
   color: #e6c521;
+}
+
+.landing .logo .nav-lg {
+  display: none;
 }
 
 .landing .logo .menu-btn {
@@ -137,18 +145,18 @@ h3 {
           transform: rotate(-45deg) translate(1rem, 1rem);
 }
 
-.landing .nav-sm {
+.landing .logo .nav-sm {
   position: absolute;
-  width: 70%;
-  height: 100%;
+  width: 50vw;
+  height: 100vh;
   top: 0;
   right: 0;
   background-color: #fff;
-  opacity: 0;
-  z-index: 9;
+  visibility: hidden;
+  z-index: -10;
 }
 
-.landing .nav-sm ul {
+.landing .logo .nav-sm ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -168,32 +176,32 @@ h3 {
   padding: 7rem 1rem 0 2rem;
 }
 
-.landing .nav-sm ul li {
+.landing .logo .nav-sm ul li {
   padding: 0.75rem 0;
 }
 
-.landing .nav-sm ul li a {
+.landing .logo .nav-sm ul li a {
   text-decoration: none;
   color: #000;
   font-weight: bold;
   cursor: pointer;
 }
 
-.landing .nav-sm.open {
-  opacity: 1;
+.landing .logo .nav-sm.open {
+  visibility: visible;
+  z-index: 9;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 
 .landing .content {
   color: #fff;
-  padding: 0 1.25rem;
+  padding: 5rem 1.25rem 0;
 }
 
 .landing .content .line {
   border-bottom: 3px solid #e6c521;
   width: 3.7rem;
-  margin-left: 0.75rem;
 }
 
 .landing .content .name {
@@ -201,14 +209,12 @@ h3 {
   font-weight: bold;
   text-transform: uppercase;
   padding-top: 5rem;
-  padding-left: 0.75rem;
 }
 
 .landing .content .quote {
   font-size: 1.625rem;
   font-weight: 600;
   padding-top: 10rem;
-  padding-left: 0.75rem;
 }
 
 .landing .content .quote span {
@@ -222,7 +228,6 @@ h3 {
   font-weight: 600;
   text-transform: uppercase;
   padding-top: 5rem;
-  padding-left: 0.75rem;
 }
 
 .landing .content .designation + .line {
@@ -878,7 +883,7 @@ h3 {
 .container .logo .back__btn {
   background-color: #000;
   color: #fff;
-  padding: 0 1rem 0.25rem 0.75rem;
+  padding: 0.25rem 1rem 0.25rem 0.75rem;
   font-weight: bold;
   text-align: center;
   border-radius: 25px;
@@ -1126,5 +1131,77 @@ h3 {
 .img-lg {
   width: 60vw !important;
   height: 45vh !important;
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .landing .nav-sm {
+    display: none;
+  }
+  .landing .logo .menu-btn {
+    display: none;
+  }
+  .landing .logo .nav-lg {
+    display: block;
+  }
+  .landing .logo .nav-lg ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    list-style: none;
+  }
+  .landing .logo .nav-lg ul li {
+    padding: 0.25rem 0.75rem;
+  }
+  .landing .logo .nav-lg ul li a {
+    position: relative;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+  }
+  .landing .logo .nav-lg ul li a::after {
+    content: '';
+    display: block;
+    border-bottom: 3px solid #e6c521;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transition: -webkit-transform .3s ease-in-out;
+    transition: -webkit-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  }
+  .landing .logo .nav-lg ul li a:hover::after {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  .landing .logo .nav-lg ul li a.active {
+    border-bottom: 3px solid #e6c521;
+  }
+  .landing .content {
+    padding-top: 3rem;
+  }
+  .landing .content .line {
+    width: 6.3rem;
+    border-bottom-width: 5px;
+  }
+  .landing .content .name {
+    font-size: 4rem;
+    padding-top: 3rem;
+  }
+  .landing .content .quote {
+    font-size: 2.5rem;
+  }
+  .landing .content .designation {
+    font-size: 2.5rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

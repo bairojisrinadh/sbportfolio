@@ -66,10 +66,18 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1rem;
+    padding: 0.5rem 1rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    width: 100%;
+    z-index: 8;
 
     h3 {
       color: color(primary);
+    }
+
+    .nav-lg {
+      display: none;
     }
 
     .menu-btn {
@@ -128,55 +136,55 @@ h3 {
         }
       }
     }
-  }
 
-  .nav-sm {
-    position: absolute;
-    width: 70%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    background-color: color(white);
-    opacity: 0;
-    z-index: 9;
-
-    ul {
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      flex-direction: column;
-      width: 100%;
-      height: 100%;
-      list-style: none;
-      padding: 7rem 1rem 0 2rem;
-
-      li {
-        padding: 0.75rem 0;
-
-        a {
-          text-decoration: none;
-          color: color(black);
-          font-weight: bold;
-          cursor: pointer;
+    .nav-sm {
+      position: absolute;
+      width: 50vw;
+      height: 100vh;
+      top: 0;
+      right: 0;
+      background-color: color(white);
+      visibility: hidden;
+      z-index: -10;
+  
+      ul {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        list-style: none;
+        padding: 7rem 1rem 0 2rem;
+  
+        li {
+          padding: 0.75rem 0;
+  
+          a {
+            text-decoration: none;
+            color: color(black);
+            font-weight: bold;
+            cursor: pointer;
+          }
         }
       }
     }
-  }
-
-  /** NAV MENU ANIMATION */
-  .nav-sm.open {
-    opacity: 1;
-    transition: all 0.3s ease-out;
+  
+    /** NAV MENU ANIMATION */
+    .nav-sm.open {
+      visibility: visible;
+      z-index: 9;
+      transition: all 0.3s ease-out;
+    }
   }
 
   .content {
     color: color(white);
-    padding: 0 1.25rem;
+    padding: 5rem 1.25rem 0;
 
     .line {
       border-bottom: 3px solid color(primary);
       width: 3.7rem;
-      margin-left: 0.75rem;
     }
 
     .name {
@@ -184,14 +192,12 @@ h3 {
       font-weight: bold;
       text-transform: uppercase;
       padding-top: 5rem;
-      padding-left: 0.75rem;
     }
 
     .quote {
       font-size: 1.625rem;
       font-weight: 600;
       padding-top: 10rem;
-      padding-left: 0.75rem;
 
       span {
         display: block;
@@ -205,7 +211,6 @@ h3 {
       font-weight: 600;
       text-transform: uppercase;
       padding-top: 5rem;
-      padding-left: 0.75rem;
 
       + .line {
         border-color: color(white);
@@ -759,7 +764,7 @@ h3 {
     .back__btn {
       background-color: color(black);
       color: color(white);
-      padding: 0 1rem 0.25rem 0.75rem;
+      padding: 0.25rem 1rem 0.25rem 0.75rem;
       font-weight: bold;
       text-align: center;
       border-radius: 25px;
@@ -980,4 +985,84 @@ h3 {
 .img-lg {
   width: 60vw !important;
   height: 45vh !important;
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  .landing {
+    .nav-sm {
+      display: none;
+    }
+    
+    .logo {
+      .menu-btn {
+        display: none;
+      }
+      .nav-lg {
+        display: block;
+
+        ul {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          list-style: none;
+          
+          li {
+            padding: 0.25rem 0.75rem;
+
+            a {
+              position: relative;
+              font-size: 0.9rem;
+              font-weight: 600;
+              text-decoration: none;
+              color: color(white);
+
+              &::after {
+                content: '';
+                display: block;
+                border-bottom: 3px solid color(primary);
+                transform: scaleX(0);
+                transition: transform .3s ease-in-out;
+              }
+
+              &:hover::after {
+                transform: scaleX(1);
+              }
+
+              &.active {
+                border-bottom: 3px solid color(primary);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .content {
+      padding-top: 3rem;
+
+      .line {
+        width: 6.3rem;
+        border-bottom-width: 5px;
+      }
+
+      .name {
+        font-size: 4rem;
+        padding-top: 3rem;
+      }
+
+      .quote {
+        font-size: 2.5rem;
+      }
+
+      .designation {
+        font-size: 2.5rem;
+      }
+    }
+  }
 }
