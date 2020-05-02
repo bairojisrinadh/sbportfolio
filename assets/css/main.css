@@ -147,7 +147,7 @@ h3 {
 
 .landing .logo .nav-sm {
   position: absolute;
-  width: 50vw;
+  width: 65%;
   height: 100vh;
   top: 0;
   right: 0;
@@ -240,14 +240,12 @@ h3 {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: relative;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-top: 0.75rem;
 }
 
@@ -257,55 +255,76 @@ h3 {
 }
 
 .projects .cards .card {
-  position: relative;
   border-left: #e6c521 solid 5px;
   -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  width: 90vw;
-  min-height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   margin-bottom: 1rem;
 }
 
-.projects .cards .card img {
-  display: inline-block;
-  width: 35%;
-  height: 100%;
+.projects .cards .card .card-img {
   margin-left: 0.5rem;
   padding: 0.25rem 0;
 }
 
+.projects .cards .card .card-img img {
+  width: 7rem;
+  height: 7rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: middle;
+}
+
 .projects .cards .card .card-content {
-  position: absolute;
-  display: inline-block;
-  width: 65%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  padding: 0.25rem 0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0.5rem 0.75rem;
 }
 
 .projects .cards .card .card-content span {
   display: block;
-  padding: 0.5rem 0.25rem;
 }
 
 .projects .cards .card .card-content .desgination {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   font-size: 0.75rem;
 }
 
 .projects .cards .card .card-content .client-name {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
   font-size: 1rem;
   font-weight: bold;
 }
 
 .projects .cards .card .card-content .tenure {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   font-size: 0.6rem;
   font-weight: 600;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  padding-top: 0.5rem;
 }
 
-.projects a {
+.projects .details {
   color: #42629a;
   text-decoration: none;
   display: -webkit-box;
@@ -369,17 +388,14 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin-top: 0.5rem;
 }
 
-.tech-stack .tech-cards .separator {
-  display: block;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  margin-bottom: 0.25rem;
-}
-
 .tech-stack .tech-cards .tech-card {
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .tech-stack .tech-cards .tech-card .title {
@@ -433,6 +449,8 @@ h3 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-left: 0.5rem;
+  max-width: 30rem;
+  padding-bottom: 0.5rem;
 }
 
 .tech-stack .tech-cards .tech-card .items .item {
@@ -442,6 +460,11 @@ h3 {
   background-color: #42629a;
   color: #fff;
   font-weight: 500;
+}
+
+.tech-stack .tech-cards .tech-card:last-of-type {
+  margin-bottom: 0;
+  border-bottom: 0px solid rgba(0, 0, 0, 0.1);
 }
 
 .about-me p {
@@ -474,17 +497,18 @@ h3 {
   margin-top: 0.75rem;
 }
 
-.contact-me .contacts .separator {
-  display: block;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  margin: 0.5rem 0;
-  width: 100%;
-}
-
 .contact-me .contacts .contact {
   width: 100%;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   /* Form Submission */
+}
+
+.contact-me .contacts .contact:last-of-type {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
 }
 
 .contact-me .contacts .contact span {
@@ -664,7 +688,7 @@ h3 {
   letter-spacing: 1px;
 }
 
-.contact-me .contacts .contact .form .form__group .btn-submit:focus {
+.contact-me .contacts .contact .form .form__group .btn-submit:focus, .contact-me .contacts .contact .form .form__group .btn-submit:hover {
   cursor: pointer;
   background-color: #000;
   color: #fff;
@@ -706,7 +730,7 @@ h3 {
           flex-direction: column;
   font-size: 1rem;
   padding: 0.5rem;
-  z-index: -3;
+  z-index: 201;
 }
 
 .footer .logo__watermark {
@@ -718,7 +742,7 @@ h3 {
   text-align: center;
   font-weight: bold;
   opacity: 0.1;
-  z-index: -2;
+  z-index: 202;
 }
 
 .footer div {
@@ -736,9 +760,11 @@ h3 {
 }
 
 .footer a {
+  position: relative;
   text-decoration: none;
   color: #fff;
   font-weight: 500;
+  z-index: 203;
 }
 
 .container {
@@ -749,7 +775,7 @@ h3 {
 
 .container .nav-sm {
   position: absolute;
-  width: 70%;
+  width: 65%;
   height: 100vh;
   top: 0;
   right: 0;
@@ -883,7 +909,7 @@ h3 {
 .container .logo .back__btn {
   background-color: #000;
   color: #fff;
-  padding: 0.25rem 1rem 0.25rem 0.75rem;
+  padding: 0 1rem 0.25rem 0.75rem;
   font-weight: bold;
   text-align: center;
   border-radius: 25px;
@@ -923,7 +949,6 @@ h3 {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  height: 90%;
   padding: 1rem;
 }
 
@@ -961,7 +986,20 @@ h3 {
   text-align: justify;
 }
 
-.container .client__content .items {
+.container .client__content .work-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.container .client__content .work-content .items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -975,9 +1013,10 @@ h3 {
       flex-wrap: wrap;
   margin-top: 1rem;
   margin-left: 0.5rem;
+  max-width: 60%;
 }
 
-.container .client__content .items .item {
+.container .client__content .work-content .items .item {
   margin: 0 0.25rem 0.5rem 0;
   padding: 0.25rem 1.25rem;
   border-radius: 25px;
@@ -986,23 +1025,23 @@ h3 {
   font-weight: 500;
 }
 
-.container .client__content .tenure {
+.container .client__content .work-content .tenure {
   width: 100%;
   padding-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
-.container .client__content .tenure span {
+.container .client__content .work-content .tenure span {
   font-size: 1rem;
   font-weight: 500;
   padding: 0.5rem;
 }
 
-.container .client__content .tenure span:first-of-type {
+.container .client__content .work-content .tenure span:first-of-type {
   padding-left: 1rem;
 }
 
-.container .client__content .tenure hr {
+.container .client__content .work-content .tenure hr {
   display: inline-block;
   margin: 0 1rem;
   width: 10%;
@@ -1023,6 +1062,8 @@ h3 {
   padding: 0.5rem 1rem;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 9999;
 }
 
 .nav-items a {
@@ -1137,7 +1178,13 @@ h3 {
   ##Device = Tablets, Ipads (portrait)
   ##Screen = B/w 768px to 1024px
 */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  section {
+    padding: 0 2rem;
+  }
   .landing .nav-sm {
     display: none;
   }
@@ -1163,21 +1210,21 @@ h3 {
   }
   .landing .logo .nav-lg ul li a {
     position: relative;
-    font-size: 0.9rem;
-    font-weight: 600;
+    font-size: 0.8rem;
+    font-weight: 700;
     text-decoration: none;
     color: #fff;
   }
   .landing .logo .nav-lg ul li a::after {
-    content: '';
+    content: "";
     display: block;
     border-bottom: 3px solid #e6c521;
     -webkit-transform: scaleX(0);
             transform: scaleX(0);
-    -webkit-transition: -webkit-transform .3s ease-in-out;
-    transition: -webkit-transform .3s ease-in-out;
-    transition: transform .3s ease-in-out;
-    transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: -webkit-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   }
   .landing .logo .nav-lg ul li a:hover::after {
     -webkit-transform: scaleX(1);
@@ -1187,7 +1234,7 @@ h3 {
     border-bottom: 3px solid #e6c521;
   }
   .landing .content {
-    padding-top: 3rem;
+    padding: 3rem 2.25rem 0;
   }
   .landing .content .line {
     width: 6.3rem;
@@ -1202,6 +1249,92 @@ h3 {
   }
   .landing .content .designation {
     font-size: 2.5rem;
+  }
+  .projects .cards {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .tech-stack .tech-cards {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .tech-stack .tech-cards .tech-card {
+    margin-right: 1.25rem;
+    margin-bottom: 0;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 0px;
+  }
+  .tech-stack .tech-cards .tech-card:last-of-type {
+    margin-right: 0px;
+    border-right: 0px;
+  }
+  .about-me p {
+    text-indent: 3rem;
+  }
+  .about-me p strong {
+    font-weight: 600;
+  }
+  .contact-me .contacts {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .contact-me .contacts .contact:first-of-type {
+    height: 100%;
+    margin-bottom: 0;
+    margin-right: 3rem;
+    border-bottom: 0;
+  }
+  .contact-me .contacts .contact .form .doc__watermark {
+    width: 20vw;
+    height: 90%;
+    background-size: 20vw;
+  }
+  .container {
+    padding: 1rem 3rem 0;
+  }
+  .container .nav-sm {
+    width: 45%;
+  }
+  .container .client__content h4 {
+    display: inline-block;
+  }
+  .container .client__content p {
+    text-indent: 3rem;
+  }
+  .container .client__content ul {
+    padding-left: 3rem;
+    margin-bottom: 1rem;
+  }
+  .container .client__content .work-content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .container .client__content .work-content > div:first-of-type {
+    margin-right: 2rem;
+    max-width: 50%;
+  }
+  .container .client__content .work-content > div:first-of-type .items {
+    max-width: 100%;
+  }
+  .container .client__content .work-content > div:last-of-type {
+    width: 100%;
+  }
+  .footer .creator {
+    font-size: 1.5rem;
+  }
+  .footer a {
+    font-size: 1.2rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
