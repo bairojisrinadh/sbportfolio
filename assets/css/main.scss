@@ -669,7 +669,7 @@ h3 {
     top: 0;
     right: 0;
     background-color: color(black);
-    opacity: 0;
+    visibility: hidden;
     z-index: 9;
 
     ul {
@@ -697,7 +697,7 @@ h3 {
 
   /** NAV MENU ANIMATION */
   .nav-sm.open {
-    opacity: 1;
+    visibility: visible;
     transition: all 0.3s ease-out;
   }
 
@@ -850,7 +850,7 @@ h3 {
         flex-wrap: wrap;
         margin-top: 1rem;
         margin-left: 0.5rem;
-        max-width: 60%;
+        max-width: 100%;
 
         .item {
           margin: 0 0.25rem 0.5rem 0;

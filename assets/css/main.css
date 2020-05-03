@@ -780,7 +780,7 @@ h3 {
   top: 0;
   right: 0;
   background-color: #000;
-  opacity: 0;
+  visibility: hidden;
   z-index: 9;
 }
 
@@ -816,7 +816,7 @@ h3 {
 }
 
 .container .nav-sm.open {
-  opacity: 1;
+  visibility: visible;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
@@ -1013,7 +1013,7 @@ h3 {
       flex-wrap: wrap;
   margin-top: 1rem;
   margin-left: 0.5rem;
-  max-width: 60%;
+  max-width: 100%;
 }
 
 .container .client__content .work-content .items .item {
