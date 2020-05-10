@@ -4,7 +4,7 @@ $colors: (
   white: #fff,
   tech-blue: #4f7dd9,
   deep-blue: #42629a,
-  black-opaque: rgba(0, 0, 0, 0.8)
+  black-opaque: rgba(0, 0, 0, 0.8),
 );
 
 @function color($required) {
@@ -209,8 +209,19 @@ h3 {
       color: color(primary);
       font-size: 1.625rem;
       font-weight: 600;
-      text-transform: uppercase;
       padding-top: 5rem;
+
+      .cursor {
+        display: inline-block;
+        width: 3px;
+        background-color: color(white);
+        margin-left: 0.2rem;
+        animation: blink 1s infinite;
+
+        &.typing {
+          animation: none;
+        }
+      }
 
       + .line {
         border-color: color(white);
@@ -771,7 +782,7 @@ h3 {
     .back__btn {
       background-color: color(black);
       color: color(white);
-      padding: 0 1rem 0.25rem 0.75rem;
+      padding: 0.2rem 1rem 0.2rem 0.75rem;
       font-weight: bold;
       text-align: center;
       border-radius: 25px;
@@ -1000,6 +1011,25 @@ h3 {
 .img-lg {
   width: 60vw !important;
   height: 45vh !important;
+}
+
+/** Animations */
+@keyframes blink {
+  0% {
+    background-color: color(white);
+  }
+  49% {
+    background-color: color(white);
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: color(white);
+  }
 }
 
 /* 
