@@ -187,6 +187,26 @@ h3 {
   cursor: pointer;
 }
 
+.landing .logo .nav-sm ul li a img {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  vertical-align: text-bottom;
+}
+
+.landing .logo .nav-sm ul li #resume {
+  display: inline-block;
+}
+
+.landing .logo .nav-sm ul li #resume span {
+  display: inline-block;
+  padding-bottom: 1px;
+}
+
+.landing .logo .nav-sm ul li:last-of-type {
+  padding-top: 2px;
+}
+
 .landing .logo .nav-sm.open {
   visibility: visible;
   z-index: 9;
@@ -265,6 +285,7 @@ h3 {
 .projects .cards a {
   color: #000;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .projects .cards .card {
@@ -574,6 +595,28 @@ h3 {
           filter: invert(0.5) sepia(1) saturate(100) hue-rotate(200deg);
 }
 
+.contact-me .contacts .contact .resume-sec {
+  margin: 1rem 0 0.75rem;
+}
+
+.contact-me .contacts .contact .resume-sec a {
+  text-decoration: none;
+  color: #000;
+}
+
+.contact-me .contacts .contact .resume-sec a span {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.contact-me .contacts .contact .resume-sec a img {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  vertical-align: text-bottom;
+}
+
 .contact-me .contacts .contact .form {
   position: relative;
 }
@@ -789,7 +832,7 @@ h3 {
 .container .nav-sm {
   position: absolute;
   width: 65%;
-  height: 100vh;
+  height: 100%;
   top: 0;
   right: 0;
   background-color: #000;
@@ -826,6 +869,26 @@ h3 {
   color: #fff;
   font-weight: bold;
   cursor: pointer;
+}
+
+.container .nav-sm ul li a img {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  vertical-align: text-bottom;
+}
+
+.container .nav-sm ul li #resume {
+  display: inline-block;
+}
+
+.container .nav-sm ul li #resume span {
+  display: inline-block;
+  padding-bottom: 1px;
+}
+
+.container .nav-sm ul li:last-of-type {
+  padding-top: 2px;
 }
 
 .container .nav-sm.open {
@@ -1282,6 +1345,19 @@ h3 {
   .landing .logo .nav-lg ul li a.active {
     border-bottom: 3px solid #e6c521;
   }
+  .landing .logo .nav-lg ul li a img {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: text-bottom;
+  }
+  .landing .logo .nav-lg ul li #resume {
+    display: inline-block;
+  }
+  .landing .logo .nav-lg ul li #resume span {
+    display: inline-block;
+    padding-bottom: 1px;
+  }
   .landing .content {
     padding: 3rem 2.25rem 0;
   }
@@ -1352,6 +1428,9 @@ h3 {
   }
   .container .nav-sm {
     width: 45%;
+  }
+  .container .logo .back__btn {
+    padding-top: 0;
   }
   .container .client__content h4 {
     display: inline-block;

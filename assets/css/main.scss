@@ -4,7 +4,7 @@ $colors: (
   white: #fff,
   tech-blue: #4f7dd9,
   deep-blue: #42629a,
-  black-opaque: rgba(0, 0, 0, 0.8),
+  black-opaque: rgba(0, 0, 0, 0.8)
 );
 
 @function color($required) {
@@ -165,6 +165,25 @@ h3 {
             color: color(black);
             font-weight: bold;
             cursor: pointer;
+
+            img {
+              display: inline-block;
+              width: 30px;
+              height: 30px;
+              vertical-align: text-bottom;
+            }
+          }
+
+          #resume {
+            display: inline-block;
+            span {
+              display: inline-block;
+              padding-bottom: 1px;
+            }
+          }
+
+          &:last-of-type {
+            padding-top: 2px;
           }
         }
       }
@@ -241,6 +260,7 @@ h3 {
     a {
       color: color(black);
       text-decoration: none;
+      cursor: pointer;
     }
 
     .card {
@@ -486,6 +506,28 @@ h3 {
         }
       }
 
+      .resume-sec {
+        margin: 1rem 0 0.75rem;
+
+        a {
+          text-decoration: none;
+          color: color(black);
+
+          span {
+            display: inline-block;
+            font-weight: 700;
+            font-size: 0.8rem;
+          }
+
+          img {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            vertical-align: text-bottom;
+          }
+        }
+      }
+
       /* Form Submission */
       .form {
         position: relative;
@@ -676,7 +718,7 @@ h3 {
   .nav-sm {
     position: absolute;
     width: 65%;
-    height: 100vh;
+    height: 100%;
     top: 0;
     right: 0;
     background-color: color(black);
@@ -701,6 +743,25 @@ h3 {
           color: color(white);
           font-weight: bold;
           cursor: pointer;
+
+          img {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            vertical-align: text-bottom;
+          }
+        }
+
+        #resume {
+          display: inline-block;
+          span {
+            display: inline-block;
+            padding-bottom: 1px;
+          }
+        }
+
+        &:last-of-type {
+          padding-top: 2px;
         }
       }
     }
@@ -1089,6 +1150,21 @@ h3 {
               &.active {
                 border-bottom: 3px solid color(primary);
               }
+
+              img {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                vertical-align: text-bottom;
+              }
+            }
+
+            #resume {
+              display: inline-block;
+              span {
+                display: inline-block;
+                padding-bottom: 1px;
+              }
             }
           }
         }
@@ -1181,6 +1257,12 @@ h3 {
 
     .nav-sm {
       width: 45%;
+    }
+
+    .logo {
+      .back__btn {
+        padding-top: 0;
+      }
     }
 
     .client__content {
