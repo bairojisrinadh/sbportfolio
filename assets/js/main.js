@@ -51,7 +51,7 @@ nav_lg_a.forEach(anchor => {
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
-const textArray = ["FULL STACK DEVELOPER", "JAVA DEVELOPER", "UX/UI DESIGNER"];
+const textArray = ["FULL STACK DEVELOPER", "JAVA DEVELOPER", "UX/UI DESIGNER", "TECH BLOGGER"];
 const typingDelay = 100;
 const erasingDelay = 50;
 const newTextDelay = 2500;
