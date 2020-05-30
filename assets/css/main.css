@@ -570,6 +570,26 @@ h3 {
   width: 100%;
 }
 
+.contact-me .contacts .contact .medium .media.blog {
+  margin-top: 1rem;
+}
+
+.contact-me .contacts .contact .medium .media.blog span {
+  display: block;
+  padding: 0.25rem 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.contact-me .contacts .contact .medium .media.blog a {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  color: #419ab5;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
 .contact-me .contacts .contact .medium .media a {
   display: inline-block;
   text-decoration: none;

@@ -4,6 +4,7 @@ $colors: (
   white: #fff,
   tech-blue: #4f7dd9,
   deep-blue: #42629a,
+  deep-green: #419ab5,
   black-opaque: rgba(0, 0, 0, 0.8)
 );
 
@@ -480,6 +481,27 @@ h3 {
 
         .media {
           width: 100%;
+
+          &.blog {
+            margin-top: 1rem;
+
+            span {
+              display: block;
+              padding: 0.25rem 0;
+              font-size: 0.75rem;
+              font-weight: 600;
+            }
+
+            a {
+              display: inline-block;
+              text-decoration: none;
+              cursor: pointer;
+              color: color(deep-green);
+              font-weight: 600;
+              font-size: 1rem;
+            }
+          }
+
           a {
             display: inline-block;
             text-decoration: none;
